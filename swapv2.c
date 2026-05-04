@@ -17,5 +17,12 @@ int main(){
     printf("Value of a after swap: %d\n", a);
     printf("Value of b after swap: %d\n", b);
 
+    printf("New swapping gives us\n");
+    a = 68;
+    b = 12;
+
+    printf("Value of a now becomes: %d\n", a);
+    printf("Value of b now becomes: %d\n", b);
+
     return 0;
 }
