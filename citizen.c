@@ -13,9 +13,8 @@ int main(){
     scanf("%d", &age);
     
         if(age < 18){
-            printf("You are %d years thereforea kid\n", age);
-            
-        }
+            printf("You are %d years therefore a kid\n", age);
+            }
 
         else if(age < 60){
             printf("You are %d years therefore an adult\n", age);
@@ -24,6 +23,6 @@ int main(){
         {
             printf("You are %d years therefore a mzee\n", age);
         }
-        
+         
     return 0;
 }
