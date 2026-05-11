@@ -12,41 +12,37 @@ void displayMenu(){
     printf("   4. DIVISION        (/) \n");
     printf("   5. EXIT\n");
     printf("Enter your choice (1-5):");
-}
+} 
 float add(float a, float b){
     return a+b;
-    printf("Enter first number:\n");
-        scanf("%f", &a);
-        printf("Enter second number:\n");
-        scanf("%f", &b);
 }
+
 float minus(float a, float b){
     return a-b;
-    printf("Enter first number:\n");
-        scanf("%f", &a);
-        printf("Enter second number:\n");
-        scanf("%f", &b);
 }
+
 float multiply(float a, float b){
     return a*b;
-    printf("Enter first number:\n");
-        scanf("%f", &a);
-        printf("Enter second number:\n");
-        scanf("%f", &b);
 }
+
 float divide(float a, float b){
     return a/b;
-    printf("Enter first number:\n");
-        scanf("%f", &a);
-        printf("Enter second number:\n");
-        scanf("%f", &b);
 }
 
 int main(){
-    int choice,a,b;
+    int choice;
+    float a, b;
     
     displayMenu();
-    scanf("%d", &choice);
+    if(scanf("%d", &choice) != 1){
+        printf("Invalid input. Please enter a number.\n");
+        return 1;
+    }
+
+    if(choice < 1 || choice >5){
+        printf("Invalid choice. Please enter a number between 1 and 5.\n");
+        return 1;
+    }
 
     switch(choice){
         case 1:
