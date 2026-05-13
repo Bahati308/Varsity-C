@@ -39,34 +39,44 @@ int main(){
         return 1;
     }
 
-    if(choice < 1 || choice >5){
+    if(choice < 1 || choice > 5){
         printf("Invalid choice. Please enter a number between 1 and 5.\n");
         return 1;
     }
 
+    if(choice != 5){
+        printf("Enter first number: ");
+        scanf("%f", &a);
+        printf("Enter second number: ");
+        scanf("%f", &b);
+    }
+
     switch(choice){
-        case 1:
-        float result = add(a,b);
-        printf("The answer is: %.3f\n", result);
-        break;
-
-        case 2:
-        float result2 = minus(a,b);
-        printf("The answer is: %.3f\n", result);
-        break;
-
-        case 3:
-        float result3 = multiply(a, b);
-        printf("The answer is: %.3f\n", result);
-        break;
-
-        case 4:
-        float result4 = divide(a,b);
-        printf("The answer is: %.3f\n", result);
-        break;
-
+        case 1: {
+            float result = add(a,b);
+            printf("The answer is: %.3f\n", result);
+            break;
+        }
+        case 2: {
+            float result2 = minus(a,b);
+            printf("The answer is: %.3f\n", result2);
+            break;
+        }
+        case 3: {
+            float result3 = multiply(a, b);
+            printf("The answer is: %.3f\n", result3);
+            break;
+        }
+        case 4: {
+            float result4 = divide(a,b);
+            printf("The answer is: %.3f\n", result4);
+            break;
+        }
+        case 5:
+            printf("Exiting calculator. Goodbye!\n");
+            break;
         default:
-        printf("Entered an invalid number\n");
+            printf("Entered an invalid number\n");
     }
     
     return 0;
