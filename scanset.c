@@ -3,7 +3,7 @@
 #include<stdio.h>
 
 int main(){
-    char str[12];
+    char str[10];
     //Read string from the user
 
     scanf("%[^\n]", str);
