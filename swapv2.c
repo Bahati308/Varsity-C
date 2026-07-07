@@ -1,28 +1,21 @@
-// this is an improverd version of swap.c
-
 #include <stdio.h>
 
-int main(){
-    int a=2, b=3;
+int main() {
+    int a, b;
 
-    printf("Before swapping we have:\n");
-    printf("Value of a before swap: %d\n", a);
-    printf("Value of b before swap: %d\n", b);
+    printf("Enter first integer (a): ");
+    scanf("%d", &a);
+    printf("Enter second integer (b): ");
+    scanf("%d", &b);
 
-    printf("After swapping we have:\n");
-    a = a + b; // now a = 5
-    b = a - b; //now b = 5-3=2
-    a = a - b; // now a = 5-2=3
-    
-    printf("Value of a after swap: %d\n", a);
-    printf("Value of b after swap: %d\n", b);
+    printf("\nBefore swapping: a = %d, b = %d\n", a, b);
 
-    printf("New swapping gives us\n");
-    a = 68;
-    b = 12;
+    // Swapping logic using arithmetic
+    a = a + b; // 'a' now holds the sum of both numbers
+    b = a - b; // Subtracting 'b' from the sum gives the original 'a'
+    a = a - b; // Subtracting the new 'b' from the sum gives the original 'b'
 
-    printf("Value of a now becomes: %d\n", a);
-    printf("Value of b now becomes: %d\n", b);
+    printf("After swapping:  a = %d, b = %d\n", a, b);
 
     return 0;
 }
